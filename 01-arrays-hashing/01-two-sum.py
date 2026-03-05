@@ -27,9 +27,9 @@ Explanation: Because nums[0] + nums[1] == 9
 
 class TwoSumBruteForce(object):
     def twoSum(self, nums, target):
-        for index1, value1 in enumerate(nums):
-            for index2, value2 in enumerate(nums):
-                if index1 != index2 and value1 + value2 == target:
+        for index1 in range(len(nums)):
+            for index2 in range(index1 + 1, len(nums)):
+                if nums[index1] + nums[index2] == target:
                     return [index1, index2]
 
 # -----------------------------
